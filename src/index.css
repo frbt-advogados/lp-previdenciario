@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@300;400;500;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --dark-blue: #1D3557;
+  --golden-yellow: #D4AF37;
+  --white: #FFFFFF;
+  --dark-gray: #333333;
+}
+
+body {
+  scroll-behavior: smooth;
+}
+
+@layer components {
+  .container-custom {
+    @apply container mx-auto px-4 max-w-7xl;
+  }
+  
+  .btn-primary {
+    @apply bg-[#D4AF37] hover:bg-[#C4A027] text-white font-semibold py-3 px-6 rounded-md transition-all duration-300 shadow-md hover:shadow-lg;
+  }
+  
+  .section-title {
+    @apply text-3xl md:text-4xl font-bold font-['Playfair_Display'] text-[#1D3557] mb-6;
+  }
+  
+  .section-padding {
+    @apply py-16 md:py-24;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.5s ease-in-out forwards;
+}
+
+.service-swiper {
+  padding: 20px 0 40px;
+}
+
+.service-swiper .swiper-pagination-bullet {
+  background: #D4AF37;
+}
+
+.service-swiper .swiper-button-next,
+.service-swiper .swiper-button-prev {
+  color: #D4AF37;
+}
+
+.service-swiper .swiper-slide {
+  height: auto;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
